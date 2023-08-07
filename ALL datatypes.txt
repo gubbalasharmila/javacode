@@ -1,0 +1,44 @@
+public class AllDataTypesExample {
+    public static void main(String[] args) {
+        // Primitive data types
+        byte myByte = 127;
+        short myShort = 32000;
+        int myInt = 2000000;
+        long myLong = 1234567890L;
+        float myFloat = 3.14f;
+        double myDouble = 2.71828;
+        char myChar = 'A';
+        boolean isTrue = true;
+
+        // Reference data types
+        String myString = "Hello, world!";
+        int[] myArray = {1, 2, 3, 4, 5};
+        // For demonstration purposes, we'll use wrapper classes for the primitive data types
+        Byte wrappedByte = Byte.valueOf(myByte);
+        Short wrappedShort = Short.valueOf(myShort);
+        Integer wrappedInt = Integer.valueOf(myInt);
+        Long wrappedLong = Long.valueOf(myLong);
+        Float wrappedFloat = Float.valueOf(myFloat);
+        Double wrappedDouble = Double.valueOf(myDouble);
+        Character wrappedChar = Character.valueOf(myChar);
+        Boolean wrappedBoolean = Boolean.valueOf(isTrue);
+
+        // Printing the values and their data types
+        System.out.println("myByte: " + myByte + ", type: " + (myByte.getClass().getSimpleName()));
+        System.out.println("myShort: " + myShort + ", type: " + (myShort.getClass().getSimpleName()));
+        System.out.println("myInt: " + myInt + ", type: " + (myInt.getClass().getSimpleName()));
+        System.out.println("myLong: " + myLong + ", type: " + (myLong.getClass().getSimpleName()));
+        System.out.println("myFloat: " + myFloat + ", type: " + (myFloat.getClass().getSimpleName()));
+        System.out.println("myDouble: " + myDouble + ", type: " + (myDouble.getClass().getSimpleName()));
+        System.out.println("myChar: " + myChar + ", type: " + (Character.class.getSimpleName()));
+        System.out.println("isTrue: " + isTrue + ", type: " + (Boolean.class.getSimpleName()));
+        System.out.println("myString: " + myString + ", type: " + (myString.getClass().getSimpleName()));
+        System.out.println("myArray: " + java.util.Arrays.toString(myArray) + ", type: " + (myArray.getClass().getSimpleName()));
+        System.out.println("wrappedByte: " + wrappedByte + ", type: " + (wrappedByte.getClass().getSimpleName()));
+        System.out.println("wrappedShort: " + wrappedShort + ", type: " + (wrappedShort.getClass().getSimpleName()));
+        System.out.println("wrappedInt: " + wrappedInt + ", type: " + (wrappedInt.getClass().getSimpleName()));
+        System.out.println("wrappedLong: " + wrappedLong + ", type: " + (wrappedLong.getClass().getSimpleName()));
+        System.out.println("wrappedFloat: " + wrappedFloat + ", type: " + (wrappedFloat.getClass().getSimpleName()));
+        System.out.println("wrappedDouble: " + wrappedDouble + ", type: " + (wrappedDouble.getClass().getSimpleName()));
+        System.out.println("wrappedChar: " + wrappedChar + ", type: " + (wrappedChar.getClass().getSimpleName()));
+        System.out.println("wrappedBoolean: " + wrappedBoolean
