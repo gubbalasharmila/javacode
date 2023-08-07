@@ -1,0 +1,34 @@
+public class IncrementOperatorExample {
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 10;
+
+        // Demonstrating pre-increment operator
+        System.out.println("Before pre-increment:");
+        System.out.println("num1: " + num1);
+        System.out.println("num2: " + num2);
+
+        ++num1;
+        ++num2;
+
+        System.out.println("After pre-increment:");
+        System.out.println("num1: " + num1);
+        System.out.println("num2: " + num2);
+
+        // Resetting the values for post-increment
+        num1 = 5;
+        num2 = 10;
+
+        // Demonstrating post-increment operator
+        System.out.println("Before post-increment:");
+        System.out.println("num1: " + num1);
+        System.out.println("num2: " + num2);
+
+        num1++;
+        num2++;
+
+        System.out.println("After post-increment:");
+        System.out.println("num1: " + num1);
+        System.out.println("num2: " + num2);
+    }
+}
