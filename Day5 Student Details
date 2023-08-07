@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class Student {
+    private int studentId;
+    private String studentName;
+    private String studentAddress;
+    private String collegeName;
+
+    private static Scanner scanner = new Scanner(System.in);
+
+    // Constructor for NIT students
+    public Student(int studentId, String studentName, String studentAddress) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.studentAddress = studentAddress;
+        this.collegeName = "NIT";
+    }
+
+    // Constructor for students from other colleges
+    public Student(int studentId, String studentName, String studentAddress, String collegeName) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.studentAddress = studentAddress;
+        this.collegeName = collegeName;
+    }
+
+    // Method to create a student object based on user input
+    public static Student createStudentFromInput() {
+        int studentId;
+        String studentName;
+        String studentAddress;
+        String collegeName;
+
+        System.out.print("Is the student from NIT? (yes/no): ");
+        String isFromNIT = scanner.next().toLowerCase();
+
+        if (isFromNIT.equals("yes")) {
+            System.out.print("Enter student ID: ");
+            studentId = scanner.nextInt();
+
+            System.out.print("Enter student name: ");
+            scanner.nextLine(); // Consume the new line character left by nextInt()
+            studentName = scanner.nextLine();
+
+            System.out.print("Enter student address: ");
+            studentAddress = scanner.nextLine();
+
+            return new Student(studentId, studentName, studentAddress);
+        } else if (isFromNIT.equals("no")) {
+            System.out.print("Enter student ID: ");
+            studentId = scanner.nextInt();
+
+            System.out.print("Enter student name: ");
+            scanner.nextLine(); // Consume the new line character left by nextInt()
+            studentName = scanner.nextLine();
+
+            System.out.print("Enter student address: ");
+            studentAddress = scanner.nextLine();
+
+            System.out.print("Enter college name: ");
+            collegeName = scanner.nextLine();
+
+            return new Student(studentId, studentName, studentAddress, collegeName);
+        } else {
+            System.out.println("Wrong Input! Please enter 'yes' or 'no'.");
+            return createStudentFromInput(); // Recursive call to get the input again
+        }
+    }
+
+    // Getters and setters (not shown for brevity)
+
+    public static void main(String[] args) {
+        Student student = createStudentFromInput();
+        // Do whatever you want with the created student object
+    }
+}
