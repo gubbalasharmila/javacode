@@ -1,0 +1,32 @@
+public class BillGenerator {
+    public static void main(String[] args) {
+        // Given prices
+        int pizzaPrice = 100;
+        int puffPrice = 20;
+        int coolDrinkPrice = 10;
+
+        // Given quantities bought
+        int numPizzas = 10;
+        int numPuffs = 12;
+        int numCoolDrinks = 5;
+
+        // Calculating the total cost for each item
+        int totalPizzaCost = pizzaPrice * numPizzas;
+        int totalPuffCost = puffPrice * numPuffs;
+        int totalCoolDrinkCost = coolDrinkPrice * numCoolDrinks;
+
+        // Calculating the final total
+        int finalTotal = totalPizzaCost + totalPuffCost + totalCoolDrinkCost;
+
+        // Printing the bill
+        System.out.println("****** Bill ******");
+        System.out.println("Item\t\tQuantity\tPrice");
+        System.out.println("--------------------------------");
+        System.out.println("Pizza\t\t" + numPizzas + "\t\t" + totalPizzaCost);
+        System.out.println("Puff\t\t" + numPuffs + "\t\t" + totalPuffCost);
+        System.out.println("Cool Drink\t" + numCoolDrinks + "\t\t" + totalCoolDrinkCost);
+        System.out.println("--------------------------------");
+        System.out.println("Total\t\t\t\t" + finalTotal);
+        System.out.println("****** Thank you! ******");
+    }
+}
